@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <h1>Percemtage+Grade Check</h1>
+
 <body>
-    
-<form onsubmit="TempGrade(); return false"; >
-<label for="tm">Total Marks:</label>
-<input type="number" name="" id="tm1" placeholder="Enter Your Total Marks">
 
-<label for="obt">Obtain Marks:</label>
-<input type="number" name="" id="obt1" placeholder="Enter Your Obtain Marks">
+    <form onsubmit="TempGrade(); return false" ;>
+        <label for="tm">Total Marks:</label>
+        <input type="number" name="" id="tm1" placeholder="Enter Your Total Marks">
 
-<button type="submit">Check Result</button>
+        <label for="obt">Obtain Marks:</label>
+        <input type="number" name="" id="obt1" placeholder="Enter Your Obtain Marks">
 
-</form>
+        <button type="submit">Check Result</button>
 
-<p id="res"></p>
-<script src="./index.js"></script>
+    </form>
+
+    <p id="res"></p>
+    <script src="index.js">
+      
+    </script>
 </body>
-</html>
-                                                            <!-- js code -->
-function TempGrade(){
 
-    let name= prompt("Enter your name")
+</html>
+
+<!-- JS CODE -->
+function TempGrade() {
+
+    let name = prompt("Enter your name")
 
     let stdTm_Marks = document.getElementById("tm1").value;
 
     let stdObt_Marks = document.getElementById("obt1").value;
 
-    res=(stdObt_Marks/stdTm_Marks)*100 ;
-    document.getElementById("res").innerHTML  = `<h3> Dear ${name},you have got it ${res}% <h3/>`
+    let res = (stdObt_Marks / stdTm_Marks) * 100;
 
-let grade=document.getElementById("res").value;
- 
-if (grade >= 90) {
-    document.getElementById("res").innerHTML = `Congratulations ${name}, you Got A+ Grade`
-}else if (grade >= 80) {
-    document.getElementById("res").innerHTML = `Congratulations ${name}, you Got A Grade`
-}else if (grade >= 70) {
-    document.getElementById("res").innerHTML = `Congratulations ${name}, you Got B+ Grade`
-}else if (grade >= 60) {
-    document.getElementById("res").innerHTML = `Congratulations ${name}, you Got B Grade`
-}else if (grade >= 50) {
-    document.getElementById("res").innerHTML = `Congratulations ${name}, you Got C Grade`
-}else if (grade >= 33) {
-    document.getElementById("res").innerHTML = `Congratulations ${name}, you Got D Grade`
-}else if (grade< 33) {
-    document.getElementById("res").innerHTML = `Opps You Failed This... Better Luck Next Time`
-}
+        if (res >= 90) {
+            document.getElementById("res").innerHTML = `Congratulations ${name},you have got it ${res}% & you Got A+ Grade`
+        }
+        else if (res >= 80) {
+            document.getElementById("res").innerHTML = `Congratulations ${name},you have got it ${res}% & you Got A Grade`
+        }else if (res >= 70) {
+            document.getElementById("res").innerHTML = `Congratulations ${name},you have got it ${res}% & you Got B+ Grade`
+        }else if (res >= 60) {
+            document.getElementById("res").innerHTML = `Congratulations ${name},you have got it ${res}% & you Got B Grade`
+        }else if (res >= 50) {
+            document.getElementById("res").innerHTML = `Congratulations ${name},you have got it ${res}% & you Got c Grade`
+        }else if (res >= 33) {
+            document.getElementById("res").innerHTML = `Congratulations ${name},you have got it ${res}% & you Got d Grade`
+        }else if (res< 33) {
+            document.getElementById("res").innerHTML = `Opps You Failed This... Better Luck Next Time`
+        }
 
 }
