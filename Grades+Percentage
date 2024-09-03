@@ -10,7 +10,7 @@
 
 <body>
 
-    <form onsubmit="TempGrade(); return false" ;>
+    <form onsubmit="PerGrade(); return false" ;>
         <label for="tm">Total Marks:</label>
         <input type="number" name="" id="tm1" placeholder="Enter Your Total Marks">
 
@@ -30,7 +30,7 @@
 </html>
 
                                                       <!-- JS CODE -->
-function TempGrade() {
+function PerGrade() {
 
     let name = prompt("Enter your name")
 
