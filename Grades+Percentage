@@ -23,7 +23,7 @@
 <script src="./index.js"></script>
 </body>
 </html>
-<!-- js code -->
+                                                            <!-- js code -->
 function TempGrade(){
 
     let name= prompt("Enter your name")
